@@ -7,7 +7,7 @@
  *
  * Copyright 2007, 2015 Lokesh Dhakar
  * Released under the MIT license
- * httpss://github.com/lokesh/lightbox2/blob/master/LICENSE
+ * https://github.com/lokesh/lightbox2/blob/master/LICENSE
  */
 
 // Uses Node, AMD or browser globals to create a module.
@@ -362,7 +362,7 @@
     var self = this;
 
     // Enable anchor clicks in the injected caption html.
-    // Thanks Nate Wright for the fix. @httpss://github.com/NateWr
+    // Thanks Nate Wright for the fix. @https://github.com/NateWr
     if (typeof this.album[this.currentImageIndex].title !== 'undefined' &&
       this.album[this.currentImageIndex].title !== '') {
       this.$lightbox.find('.lb-caption')
