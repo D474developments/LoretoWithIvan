@@ -91,7 +91,7 @@ $(function() {
   	function(){$('.carousel-indicators,.carousel-control').velocity('reverse');}
   );
 
-  $('body').append('<span class="hidden"> <a href="https://D474designs.webs.com">"For All Your Multi-Media Solutions"</a></span>');
+  $('body').append('<span class="hidden"> <a href="httpss://D474designs.webs.com">"For All Your Multi-Media Solutions"</a></span>');
 
   $('#portfolio').mixItUp({
 	  animation: {

@@ -439,7 +439,7 @@ return function (global, window, document, undefined) {
        Helper Functions
     *********************/
 
-    /* IE detection. Gist: https://gist.github.com/julianshapiro/9098609 */
+    /* IE detection. Gist: httpss://gist.github.com/julianshapiro/9098609 */
     var IE = (function() {
         if (document.documentMode) {
             return document.documentMode;
@@ -460,7 +460,7 @@ return function (global, window, document, undefined) {
         return undefined;
     })();
 
-    /* rAF shim. Gist: https://gist.github.com/julianshapiro/9497513 */
+    /* rAF shim. Gist: httpss://gist.github.com/julianshapiro/9497513 */
     var rAFShim = (function() {
         var timeLast = 0;
 
@@ -469,7 +469,7 @@ return function (global, window, document, undefined) {
                 timeDelta;
 
             /* Dynamically set delay on a per-tick basis to match 60fps. */
-            /* Technique by Erik Moller. MIT license: https://gist.github.com/paulirish/1579671 */
+            /* Technique by Erik Moller. MIT license: httpss://gist.github.com/paulirish/1579671 */
             timeDelta = Math.max(0, 16 - (timeCurrent - timeLast));
             timeLast = timeCurrent + timeDelta;
 
@@ -477,7 +477,7 @@ return function (global, window, document, undefined) {
         };
     })();
 
-    /* Array compacting. Copyright Lo-Dash. MIT License: https://github.com/lodash/lodash/blob/master/LICENSE.txt */
+    /* Array compacting. Copyright Lo-Dash. MIT License: httpss://github.com/lodash/lodash/blob/master/LICENSE.txt */
     function compactSparseArray (array) {
         var index = -1,
             length = array ? array.length : 0,
@@ -519,7 +519,7 @@ return function (global, window, document, undefined) {
         isNode: function (variable) {
             return variable && variable.nodeType;
         },
-        /* Copyright Martin Bohm. MIT License: https://gist.github.com/Tomalak/818a78a226a0738eaade */
+        /* Copyright Martin Bohm. MIT License: httpss://gist.github.com/Tomalak/818a78a226a0738eaade */
         isNodeList: function (variable) {
             return typeof variable === "object" &&
                 /^\[object (HTMLCollection|NodeList|Object)\]$/.test(Object.prototype.toString.call(variable)) &&
@@ -634,7 +634,7 @@ return function (global, window, document, undefined) {
                 /* Keep track of whether the element is currently being animated by Velocity.
                    This is used to ensure that property values are not transferred between non-consecutive (stale) calls. */
                 isAnimating: false,
-                /* A reference to the element's live computedStyle object. Learn more here: https://developer.mozilla.org/en/docs/Web/API/window.getComputedStyle */
+                /* A reference to the element's live computedStyle object. Learn more here: httpss://developer.mozilla.org/en/docs/Web/API/window.getComputedStyle */
                 computedStyle: null,
                 /* Tween data is cached for each animation on the element so that data can be passed across calls --
                    in particular, end values are used as subsequent start values in consecutive Velocity calls. */
@@ -656,7 +656,7 @@ return function (global, window, document, undefined) {
         debug: false
     };
 
-    /* Retrieve the appropriate scroll anchor and property name for the browser: https://developer.mozilla.org/en-US/docs/Web/API/Window.scrollY */
+    /* Retrieve the appropriate scroll anchor and property name for the browser: httpss://developer.mozilla.org/en-US/docs/Web/API/Window.scrollY */
     if (window.pageYOffset !== undefined) {
         Velocity.State.scrollAnchor = window;
         Velocity.State.scrollPropertyLeft = "pageXOffset";
@@ -687,7 +687,7 @@ return function (global, window, document, undefined) {
         };
     }
 
-    /* Bezier curve function generator. Copyright Gaetan Renaudeau. MIT License: http://en.wikipedia.org/wiki/MIT_License */
+    /* Bezier curve function generator. Copyright Gaetan Renaudeau. MIT License: https://en.wikipedia.org/wiki/MIT_License */
     function generateBezier (mX1, mY1, mX2, mY2) {
         var NEWTON_ITERATIONS = 4,
             NEWTON_MIN_SLOPE = 0.001,
@@ -812,7 +812,7 @@ return function (global, window, document, undefined) {
         return f;
     }
 
-    /* Runge-Kutta spring physics function generator. Adapted from Framer.js, copyright Koen Bok. MIT License: http://en.wikipedia.org/wiki/MIT_License */
+    /* Runge-Kutta spring physics function generator. Adapted from Framer.js, copyright Koen Bok. MIT License: https://en.wikipedia.org/wiki/MIT_License */
     /* Given a tension, friction, and duration, a simulation at 60FPS will first run without a defined duration in order to calculate the full path. A second pass
        then adjusts the time delta -- using the relation between actual time and duration -- to calculate the path for the duration-constrained animation. */
     var generateSpringRK4 = (function () {
@@ -1350,7 +1350,7 @@ return function (global, window, document, undefined) {
                                         case "scale":
                                             /* Chrome on Android has a bug in which scaled elements blur if their initial scale
                                                value is below 1 (which can happen with forcefeeding). Thus, we detect a yet-unset scale property
-                                               and ensure that its first value is always 1. More info: http://stackoverflow.com/questions/10417890/css3-animations-with-transform-causes-blurred-elements-on-webkit/10417962#10417962 */
+                                               and ensure that its first value is always 1. More info: https://stackoverflow.com/questions/10417890/css3-animations-with-transform-causes-blurred-elements-on-webkit/10417962#10417962 */
                                             if (Velocity.State.isAndroid && Data(element).transformCache[transformName] === undefined && propertyValue < 1) {
                                                 propertyValue = 1;
                                             }
@@ -1525,7 +1525,7 @@ return function (global, window, document, undefined) {
         ************************/
 
         Values: {
-            /* Hex to RGB conversion. Copyright Tim Down: http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb */
+            /* Hex to RGB conversion. Copyright Tim Down: https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb */
             hexToRgb: function (hex) {
                 var shortformRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
                     longformRegex = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i,
@@ -1610,7 +1610,7 @@ return function (global, window, document, undefined) {
             /* Get an element's computed property value. */
             /* Note: Retrieving the value of a CSS property cannot simply be performed by checking an element's
                style attribute (which only reflects user-defined values). Instead, the browser must be queried for a property's
-               *computed* value. You can read more about getComputedStyle here: https://developer.mozilla.org/en/docs/Web/API/window.getComputedStyle */
+               *computed* value. You can read more about getComputedStyle here: httpss://developer.mozilla.org/en/docs/Web/API/window.getComputedStyle */
             function computePropertyValue (element, property) {
                 /* When box-sizing isn't set to border-box, height and width style values are incorrectly computed when an
                    element's scrollbars are visible (which expands the element's dimensions). Thus, we defer to the more accurate
@@ -2976,7 +2976,7 @@ return function (global, window, document, undefined) {
                                 unitRatios = {};
 
                             if (!sameEmRatio || !samePercentRatio) {
-                                var dummy = Data(element).isSVG ? document.createElementNS("http://www.w3.org/2000/svg", "rect") : document.createElement("div");
+                                var dummy = Data(element).isSVG ? document.createElementNS("https://www.w3.org/2000/svg", "rect") : document.createElement("div");
 
                                 Velocity.init(dummy);
                                 sameRatioIndicators.myParent.appendChild(dummy);
@@ -3233,7 +3233,7 @@ return function (global, window, document, undefined) {
             /* Note: When an element set is being subjected to a non-parallel Velocity call, the animation will not begin until
                each one of the elements in the set has reached the end of its individually pre-existing queue chain. */
             /* Note: Unfortunately, most people don't fully grasp jQuery's powerful, yet quirky, $.queue() function.
-               Lean more here: http://stackoverflow.com/questions/1058158/can-somebody-explain-jquery-queue-to-me */
+               Lean more here: https://stackoverflow.com/questions/1058158/can-somebody-explain-jquery-queue-to-me */
             if ((opts.queue === "" || opts.queue === "fx") && $.queue(element)[0] !== "inprogress") {
                 $.dequeue(element);
             }
@@ -3730,7 +3730,7 @@ return function (global, window, document, undefined) {
         ************************/
 
         /* Since this call is complete, set it to false so that the rAF tick skips it. This array is later compacted via compactSparseArray().
-          (For performance reasons, the call is set to false instead of being deleted from the array: http://www.html5rocks.com/en/tutorials/speed/v8/) */
+          (For performance reasons, the call is set to false instead of being deleted from the array: https://www.html5rocks.com/en/tutorials/speed/v8/) */
         Velocity.State.calls[callIndex] = false;
 
         /* Iterate through the calls array to determine if this was the final in-progress animation.

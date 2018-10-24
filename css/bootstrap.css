@@ -3671,7 +3671,7 @@ tbody.collapse.in {
 @media (min-width: 650px) {
   .navbar-right .dropdown-menu {
     left: auto;
-    right: 0;
+    /* right: 0; */
   }
   .navbar-right .dropdown-menu-left {
     left: 0;
@@ -4281,7 +4281,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
-  right: 0;
+  /* right: 0; */
   left: 0;
   z-index: 1030;
 }

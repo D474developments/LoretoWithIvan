@@ -3,11 +3,24 @@ body
     font: normal 14px/1.7 "Open Sans", "Open Sans Light";
     word-spacing: 1.5px;
     position: relative;
+    overflow-y: scroll;
     overflow-x: hidden;
+
 }
 
-.seaOfCortez {
+/* @media (min-width: 768px) {
+  .navbar-brand {
+  }
+  .navbar-brand .first {
+    order: 2;
+  }
+  .navbar-brand .second {
+    order: 1;
+  }
+} */
 
+.seaOfCortez {
+  overflow-x: hidden;
 }
 .whale {
   width: 33%;
@@ -21,6 +34,7 @@ body
 #carousel1
 {
     margin-bottom: 30px;
+    width: 100%;
 }
 #portfolio #portfolio-cats li
 {
@@ -161,7 +175,7 @@ body
 
 #contact
 {
-    padding-left: 200px;
+    /* padding-left: 200px; */
 }
 #contact label
 {
@@ -283,6 +297,7 @@ body
 {
     right: -35px;
 }
+
 .navbar-header .navbar-brand
 , footer.footer .logo span
 {
@@ -512,6 +527,9 @@ button.navbar-toggle
     padding-left: 8px;
 }
 
+/* .nav.navbar-brand.text-uppercase{
+  display: none;
+} */
 
 }
 
@@ -549,6 +567,14 @@ button.navbar-toggle
 nav.navbar ul
 {
     background-color: rgba(0,0,0,0.80);
+}
+.carousel-caption {
+  display: none;
+}
+
+.whale {
+  bottom: 7%;
+  right: 12%;
 }
 
 }
