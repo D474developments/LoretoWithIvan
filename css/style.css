@@ -291,11 +291,11 @@ body
 }
 .left.carousel-control
 {
-    left: -35px;
+    /* left: -35px; */
 }
 .right.carousel-control
 {
-    right: -35px;
+    /* right: -35px; */
 }
 
 .navbar-header .navbar-brand
